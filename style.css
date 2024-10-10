@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(12, 12, 12);
+    color: white;
+}
+.nameFirstLetter{
+    color: red;
+    font-size: 1.5em;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+    background-color: rgb(13, 0, 0);
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    list-style: none;
+    margin: 0 25px;
+    color: white;    position: relative;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;   
+    position: relative;
+}
+nav ul li a::after{
+      content: '';
+      width: 0;
+      height: 3px;
+      background-color: #ff004f;
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      transition: 0.3s;
+}
+nav ul li a:hover::after{
+    font-size: 1.07rem;
+    width: 100%;
+}
+.left{
+    font-size: 1.7rem;
+}
+.firstSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5% 17%;
+}
+
+.leftSection{
+    background-color: rgb(12, 12, 12);
+    font-size: 3rem;
+    width: 50%;
+}
+.rightSection{
+    background-color: rgb(12, 12, 12);
+    justify-content: center;
+}
+.name{
+    color: red;
+}
+.image{
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    background-color: rgb(37, 37, 37);
+    border: 1px solid white;
+    box-shadow: inset blur;
+}
+#about{
+    padding: 10rem;
+    display: block;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.aboutCol1{
+    flex-basis: 35%;
+}
+
+.aboutCol2{
+    flex-basis: 60%;
+}
+.aboutCol2 h1{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.tabTitles{
+    display: flex;
+    margin: 15px 0 0 0;
+    position: relative;
+}
+.tabLinks{
+    margin-right: 50px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.tabLinks::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+.tabLinks:hover::after{
+    font-size: 1.07rem;
+    width: 100%;
+}
