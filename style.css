@@ -1,3 +1,9 @@
+:root{
+    --primaryColor : #ff004f;
+    --txtcolor : #ababab;
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -35,7 +41,7 @@ nav ul li a::after{
       content: '';
       width: 0;
       height: 3px;
-      background-color: #ff004f;
+      background-color: var(--primaryColor);
       position: absolute;
       left: 0;
       bottom: -6px;
@@ -75,9 +81,10 @@ nav ul li a:hover::after{
     border: 1px solid white;
     box-shadow: inset blur;
 }
+/* ------------------- About-------------------------  */
 #about{
-    padding: 10rem;
-    display: block;
+    padding: 8rem;
+    color: var(--txtcolor);
 }
 .row{
     display: flex;
@@ -88,36 +95,56 @@ nav ul li a:hover::after{
 .aboutCol1{
     flex-basis: 35%;
 }
-
+.aboutCol1 img{
+    width: 100%;
+    border-radius: 15px;
+}
 .aboutCol2{
     flex-basis: 60%;
 }
-.aboutCol2 h1{
+.aboutCol2.subTitle{
     font-size: 3rem;
     font-weight: 600;
+    color: white;
+    margin-bottom: 1rem;
 }
 .tabTitles{
     display: flex;
-    margin: 15px 0 0 0;
-    position: relative;
+    margin: 1rem 0 2rem ;
 }
 .tabLinks{
-    margin-right: 50px;
-    font-size: 1.3rem;
+    margin-right: 3rem;
+    font-size: 1.1rem;
     font-weight: 500;
     cursor: pointer;
+    position: relative;
 }
 .tabLinks::after{
-    content: '';
+    content: "";
     width: 0;
-    height: 3px;
-    background-color: #ff004f;
+    height: 0.2rem;
+    background: var(--primaryColor);
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: -8px;
     transition: 0.3s;
 }
-.tabLinks:hover::after{
-    font-size: 1.07rem;
-    width: 100%;
+.tabLinks.activeLink::after{
+    width: 75%;
+}
+/* .tabContents ul{
+    margin-left: 1rem;
+} */
+.tabContents ul li{
+    list-style: none;
+    margin: 0.7rem 0;
+}
+.tabContents ul li span{
+    color: var(--primaryColor);
+}
+.tabContents{
+    display: none;
+}
+.tabContents.activeTab{
+    display: block;
 }
